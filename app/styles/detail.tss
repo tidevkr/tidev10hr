@@ -1,0 +1,12 @@
+".container" : {
+ 	 
+}
+
+"#webView" : {
+	top : 44
+}
+
+"#rateView" : {
+	height : 44,
+	top : 0
+}
