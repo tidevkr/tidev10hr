@@ -1,0 +1,10 @@
+<Alloy>
+	<Window class="container">
+		<WebView id="webView">
+			
+		</WebView>
+		<View id="rateView">
+			<Label>평가 버튼이 들어갈 자리</Label>
+		</View>
+	</Window>
+</Alloy>
