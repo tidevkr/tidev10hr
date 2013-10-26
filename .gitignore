@@ -9,3 +9,4 @@ tmp
 Resources
 tiapp.xml
 manifest
+*.log
