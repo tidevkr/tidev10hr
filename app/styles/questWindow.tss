@@ -41,6 +41,26 @@
 	font : {
 		fontSize: 20
 	}
+},
+"#questTableView": {
+	top: 160,
+	width: "80%"
+	// borderWidth: 1
+},
+".qRow":{
+	font: {
+		fontFamily:'Arial',
+		// fontSize: 19,
+		fontWeight: 'bold'
+	}
+},
+".qLabel":{
+	color: "#999"
+},
+".uncompletedQuest": {
+	font: {
+		
+	}
 }
 
 

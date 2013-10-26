@@ -4,7 +4,13 @@
 			<ImageView id="profileImageView" />
 			<Label id="nameLabel">name</Label>
 			<Button id="logoutButton">log out</Button>
-			<Label id="quest01">앱 다운 & 로그</Label>
+			<TableView id="questTableView">
+				<TableViewSection>
+					<TableViewRow class="qRow" title="v">
+						<Label class="qLabel">앱 설치 & 로그</Label>
+					</TableViewRow>
+				</TableViewSection>
+			</TableView>
 			<!-- <Label id="emailLabel">email</Label> -->
 		</View>
 	</Window>
