@@ -1,8 +1,12 @@
 <Alloy>
 	<Window class="container">
 		<ListView id="listView">
+			<Templates>
+				<ItemTemplate name="item">
+					<Label class="red" bindId="myLabel"></Label>
+				</ItemTemplate>
+			</Templates>
 			<ListSection id="section">
-				
 			</ListSection>
 		</ListView>
 	</Window>

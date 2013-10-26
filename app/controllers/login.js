@@ -21,7 +21,7 @@ var fbHandler = function(e){
 		        loginUser.save();
 
 		        subscribePushChannel(function(){
-		        	currentWindow.close();
+		        		currentWindow.close();
 		        });
 		        //
 		    } else {
@@ -68,5 +68,7 @@ function subscribePushChannel(callback){
 		        $.fbLogin.title = "Connect Facebook";
 		    }
 		});
+	}else{
+		callback && callback();
 	}
 }

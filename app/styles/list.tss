@@ -2,3 +2,8 @@
 ".container" : {
   title : '강좌 목록'
 }
+
+".red[platform=android]" :{
+	color : 'red',
+	right : 0
+}
