@@ -15,8 +15,7 @@ var Cloud = require('ti.cloud');
 var facebookModule = require('facebook');
 facebookModule.appid = "591050647599312";
 //facebookModule.permissions = [FACEBOOK_APP_PERMISSIONS];
-
-
+Alloy.Models.instance('user');
 
 // Push Notifications..
 if(OS_IOS){
@@ -60,3 +59,10 @@ if(OS_ANDROID){
 	    alert(evt.payload);
 	});
 }
+
+
+Alloy.Collections.instance('user');
+var col = Alloy.Collections.instance('user').on('reset',function(col){
+	Alloy.Models.instance('user').set(col.first().attributes);
+});
+col.fetch();

@@ -13,7 +13,13 @@ var fbHandler = function(e){
 		    if (e.success) {
 		        var user = e.users[0];
 		        Ti.App.Properties.setString('cloudSessionId', Cloud.sessionId);
-		       // alert(String.format('%s님 반갑습니다.',user.last_name+user.first_name));
+		        // alert(String.format('%s님 반갑습니다.',user.last_name+user.first_name));
+		        Alloy.Collections.instance('user').reset([]); //reset
+		        
+		        var loginUser = Alloy.Models.instance('user');
+		        loginUser.set(user);
+		        loginUser.save();
+
 		        subscribePushChannel(function(){
 		        	currentWindow.close();
 		        });
