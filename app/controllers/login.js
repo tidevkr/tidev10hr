@@ -5,6 +5,7 @@ var fbHandler = function(e){
         Ti.API.info('Logged in ' + token);
         facebookModule.logout();
         
+        $.fbLogin.title = "연결중..";
         Cloud.SocialIntegrations.externalAccountLogin({
 		    type: 'facebook',
 		    token: token
@@ -20,6 +21,7 @@ var fbHandler = function(e){
 		    } else {
 		        alert('Error:\n' +
 		            ((e.error && e.message) || JSON.stringify(e)));
+		     	   $.fbLogin.title = "Connect Facebook";
 		    }
 		});
     }
@@ -27,6 +29,10 @@ var fbHandler = function(e){
 
 $.fbLogin.addEventListener('click', function(e) {
 	facebookModule.authorize();
+});
+
+$.emailBtn.addEventListener('click', function(e) {
+	alert('아직 안되지롱~요..facebook으로 해주세요.^^');
 });
 
 currentWindow.addEventListener('open', function(e) {
@@ -50,12 +56,11 @@ function subscribePushChannel(callback){
 		}, function (e) {
 		    if (e.success) {
 		        alert('첫번째 미션 회원가입 및 로그인 성공하셨습니다. 당첨 및 추가 이벤트는 푸쉬 알림으로 알려드리니 귀(?) 기울여 주세요.');
+		        callback && callback();
 		    } else {
 		        alert('ACS PUSH Error:\n' + JSON.stringify(e));
+		        $.fbLogin.title = "Connect Facebook";
 		    }
-		    callback && callback();
 		});
 	}
 }
-
-subscribePushChannel();
