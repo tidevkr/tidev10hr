@@ -32,6 +32,15 @@
 },
 "#emailLabel": {
 	top: 71
+},
+"#fbLogin": {
+	top: 100,
+	backgroundColor : '#2980b9',
+	color : 'white',
+	width : '80%',
+	font : {
+		fontSize: 20
+	}
 }
 
 
