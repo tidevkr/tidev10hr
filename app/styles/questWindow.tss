@@ -33,11 +33,11 @@
 "#emailLabel": {
 	top: 71
 },
-"#fbLogin": {
+"#logoutButton": {
 	top: 100,
 	backgroundColor : '#2980b9',
 	color : 'white',
-	width : '80%',
+	width : '200',
 	font : {
 		fontSize: 20
 	}

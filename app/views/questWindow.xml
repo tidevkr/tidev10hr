@@ -3,7 +3,8 @@
 		<View id="userView">
 			<ImageView id="profileImageView" />
 			<Label id="nameLabel">name</Label>
-			<Button id="fbLogin">Connect Facebook</Button>
+			<Button id="logoutButton">log out</Button>
+			<Label id="quest01">앱 다운 & 로그</Label>
 			<!-- <Label id="emailLabel">email</Label> -->
 		</View>
 	</Window>
