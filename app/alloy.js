@@ -63,6 +63,9 @@ if(OS_ANDROID){
 
 Alloy.Collections.instance('user');
 var col = Alloy.Collections.instance('user').on('reset',function(col){
-	Alloy.Models.instance('user').set(col.first().attributes);
+	var firstUser = col.first();
+	if(firstUser){
+		Alloy.Models.instance('user').set(col.first().attributes);
+	}
 });
 col.fetch();
