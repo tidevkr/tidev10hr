@@ -60,12 +60,4 @@ if(OS_ANDROID){
 	});
 }
 
-
-Alloy.Collections.instance('user');
-var col = Alloy.Collections.instance('user').on('reset',function(col){
-	var firstUser = col.first();
-	if(firstUser){
-		Alloy.Models.instance('user').set(col.first().attributes);
-	}
-});
-col.fetch();
+var cloudSessionId = Ti.App.Properties.getString('cloudSessionId');
