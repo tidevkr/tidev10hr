@@ -16,7 +16,7 @@
 	defaultImage: 'images/defaultImageView.png',
 	borderWidth : 0.5,
 	borderRadius : 3,
-	borderColor : '#030303',
+	borderColor : '#333',
 	height : 48, // 73/2 is 36.5 but it's too small
 	width : 48,
 	top : 10
@@ -44,7 +44,8 @@
 },
 "#questTableView": {
 	top: 160,
-	width: "80%"
+	width: "80%",
+	height: 300
 	// borderWidth: 1
 },
 ".qRow":{
@@ -56,11 +57,6 @@
 },
 ".qLabel":{
 	color: "#999"
-},
-".uncompletedQuest": {
-	font: {
-		
-	}
 }
 
 
