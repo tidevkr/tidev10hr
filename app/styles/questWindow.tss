@@ -1,0 +1,41 @@
+//Besides, JSON values and Titanium SDK constants, 
+//the TSS can handle the localization function Ti.Locale.getString() 
+//and its shorthand L() as well as
+//expr(), which can contain any valid JavaScript, executed at runtime.
+
+// density == Ti.Platform.DisplayCaps.density
+// pixel == dp * ( density / 160 )
+"#userView": {
+	height: 200,
+	width: Ti.UI.FILL,
+	top: 0,
+	left: 0,
+	backgroundColor: "#FDFDFD"
+},
+"#profileImageView":{
+	defaultImage: 'images/defaultImageView.png',
+	borderWidth : 0.5,
+	borderRadius : 3,
+	borderColor : '#030303',
+	height : 48, // 73/2 is 36.5 but it's too small
+	width : 48,
+	top : 10
+},
+"#nameLabel": {
+	top: 61,
+	color: '#000',
+	font: {
+		fontFamily:'Arial',
+		fontSize: 19,
+		fontWeight: 'bold'
+	}
+},
+"#emailLabel": {
+	top: 71
+}
+
+
+
+
+
+
