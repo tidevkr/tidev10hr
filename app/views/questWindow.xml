@@ -4,10 +4,18 @@
 			<ImageView id="profileImageView" />
 			<Label id="nameLabel">name</Label>
 			<Button id="logoutButton">log out</Button>
-			<TableView id="questTableView">
+		</View>
+		<View id="contentView">
+			<TableView id="questTableView" scrollable="false">
 				<TableViewSection>
 					<TableViewRow class="qRow" title="v">
-						<Label class="qLabel">앱 설치 & 로그</Label>
+						<Label id="q1" class="qLabel">앱 설치 & 로그</Label>
+					</TableViewRow>
+					<TableViewRow class="qRow" title="">
+						<Label id="q2" class="qLabel">리뷰 (0/5)개 남기기</Label>
+					</TableViewRow>
+					<TableViewRow class="qRow" title="">
+						<Label id="q3" class="qLabel">B35에서 도장 받기</Label>
 					</TableViewRow>
 				</TableViewSection>
 			</TableView>

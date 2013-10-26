@@ -14,17 +14,16 @@ user.on('change', function(){
 });
 user.trigger('change');
 
-
 $.logoutButton.addEventListener('click', function(){
 	Cloud.Users.logout(function(e){
 		if(e.success){
 			alert("로그 아웃 되었습니다.");
-			Alloy.createController('login').getView().open();;
 			Ti.App.Properties.removeProperty('cloudSessionId');
+			Alloy.createController('login').getView().open();;
 		}else{
 			alert("로그 아웃이 실패 했는데..\n다시 시도 해보실래요?;;");
 		}
 	});
 });
 
-
+$.q1.setColor('#000');
