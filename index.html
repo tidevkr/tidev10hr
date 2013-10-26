@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="10Hour Live Project : 말보다는 직접 코드로 보여드립니다. 10시간 동안 부스에서 앱 만들기 프로젝트!" />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
 
-    <title>10Hour Live Project</title>
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>10Hour Live Project by yomybaby</title>
   </head>
 
   <body>
+    <a id="forkme_banner" href="https://github.com/yomybaby/tidev10hr">View on GitHub</a>
+    <div class="shell">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/yomybaby/tidev10hr">View on GitHub</a>
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>10Hour Live Project</h1>
+            <h2>말보다는 직접 코드로 보여드립니다. 10시간 동안 부스에서 앱 만들기 프로젝트!</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
 
-          <h1 id="project_title">10Hour Live Project</h1>
-          <h2 id="project_tagline">말보다는 직접 코드로 보여드립니다. 10시간 동안 부스에서 앱 만들기 프로젝트!</h2>
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/yomybaby/tidev10hr/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/yomybaby/tidev10hr/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/yomybaby/tidev10hr/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/yomybaby/tidev10hr/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
         <h3>
 <a name="%ED%95%9C%EA%B5%AD-%ED%83%80%EC%9D%B4%ED%83%80%EB%8A%84-%EC%82%AC%EC%9A%A9%EC%9E%90-%EB%AA%A8%EC%9E%84%EC%9D%98-10hr-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90-%EC%98%A4%EC%8B%A0%EA%B2%83%EC%9D%84-%ED%99%98%EC%98%81%ED%95%A9%EB%8B%88%EB%8B%A4" class="anchor" href="#%ED%95%9C%EA%B5%AD-%ED%83%80%EC%9D%B4%ED%83%80%EB%8A%84-%EC%82%AC%EC%9A%A9%EC%9E%90-%EB%AA%A8%EC%9E%84%EC%9D%98-10hr-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90-%EC%98%A4%EC%8B%A0%EA%B2%83%EC%9D%84-%ED%99%98%EC%98%81%ED%95%A9%EB%8B%88%EB%8B%A4"><span class="octicon octicon-link"></span></a>한국 타이타늄 사용자 모임의 10hr 프로젝트에 오신것을 환영합니다.</h3>
 
@@ -65,14 +80,19 @@ TiSDK를 이용하여 iOS, Android 네이티브 앱을 만듭니다.</p>
 
 <p>궁금하세요? 해보신다고요! 환영합니다. 일단 26일(토) 오후 4시 30분 타이타늄 미트업으로 오세요. 타이타늄의 과거, 현재, 미래에 대한 이야기, Alloy Widget 만들기, 첫 타이타늄 앱 개발 경험등 재미있는 이야기가 준비 중입니다.</p>
       </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">10Hour Live Project maintained by <a href="https://github.com/yomybaby">yomybaby</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/yomybaby">yomybaby</a> can be found on <a href="https://github.com/yomybaby/tidev10hr">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
       </footer>
+
     </div>
 
               <script type="text/javascript">
@@ -85,7 +105,6 @@ TiSDK를 이용하여 iOS, Android 네이티브 앱을 만듭니다.</p>
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
