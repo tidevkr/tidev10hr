@@ -1,0 +1,22 @@
+".container" : {
+	navBarHidden : true,
+	backgroundColor : 'white'
+}
+
+".wrap" : {
+	layout : 'vertical',
+	height : Ti.UI.SIZE
+}
+
+"#fbLogin" : {
+	backgroundColor : '#2980b9',
+	color : 'white',
+	width : '80%',
+	font : {
+		fontSize: 20
+	}
+}
+
+".or" : {
+	top : 20
+}
