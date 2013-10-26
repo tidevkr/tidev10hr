@@ -2,7 +2,7 @@
 	<TabGroup>
 		<Tab title="Tab 1" icon="KS_nav_ui.png">
 			<Window title="Tab 1">
-				<Label>I am Window 1</Label>
+				<Label>지금 한참 계발 중입니다.^^</Label>
 			</Window>
 		</Tab>
 		<Tab title="Tab 2" icon="KS_nav_views.png">

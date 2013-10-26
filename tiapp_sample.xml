@@ -15,7 +15,7 @@
     <property name="acs-oauth-key-development" type="string"></property>
     <property name="acs-api-key-development" type="string"></property>
    
-    <id>kr.tidev.tenhour</id>
+    <id>kr.tidev.tenhours</id>
     <name>tidev10hr</name>
     <version>1.0</version>
     <publisher>yomybaby</publisher>
