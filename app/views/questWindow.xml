@@ -3,6 +3,7 @@
 		<View id="userView">
 			<ImageView id="profileImageView" />
 			<Label id="nameLabel">name</Label>
+			<Button id="fbLogin">Connect Facebook</Button>
 			<!-- <Label id="emailLabel">email</Label> -->
 		</View>
 	</Window>
