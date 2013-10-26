@@ -3,7 +3,7 @@ var fbHandler = function(e){
 	if (e.success) {
         var token = this.accessToken;
         Ti.API.info('Logged in ' + token);
-        facebookModule.logout();
+        // facebookModule.logout();
         
         $.fbLogin.title = "연결중..";
         Cloud.SocialIntegrations.externalAccountLogin({

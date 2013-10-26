@@ -3,7 +3,7 @@
 		<View id="userView">
 			<ImageView id="profileImageView" />
 			<Label id="nameLabel">name</Label>
-			<Label id="emailLabel">email</Label>
+			<!-- <Label id="emailLabel">email</Label> -->
 		</View>
 	</Window>
 </Alloy>
