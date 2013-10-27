@@ -27,7 +27,7 @@ if (model) {
             alert("리뷰를 등록합니다.");
             Cloud.Reviews.create({
                 place_id: model.get("id"),
-                rating: 1,
+                rating: num,
                 content: 'Good'
             }, function (e) {
                 if (e.success) {
