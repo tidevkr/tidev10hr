@@ -42,6 +42,7 @@ quests.on('change:isCompleted', function(quest, e2, e3){
 	var label = row.getChildren()[0];
 	// alert(JSON.stringify(e1));
 	if( quest.get('isCompleted') ){
+		// alert(index);
 		row.setTitle('v');
 		label.setColor('#000');
 	}else{
@@ -62,7 +63,7 @@ quests.on('change:reviewed', function(quest){
 });
 
 quests.at(0).set({isCompleted: true});
-// quests.at(1).set({reviewed:5});
+quests.at(1).set({reviewed:4});
 
 var user = Alloy.Models.instance('user');
 user.on('change', function(){

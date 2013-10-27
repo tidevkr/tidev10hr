@@ -33,6 +33,9 @@ if (model) {
                 if (e.success) {
                     var review = e.reviews[0];
                     alert('리뷰를 등록했습니다.');
+                    var q1 = Alloy.Collections.instance('quest').at(1);
+					var count = q1.get('reviewed');
+					q1.set({'reviewed': count+1});
                 } else {
                     alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
                 }
