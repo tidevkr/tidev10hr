@@ -19,7 +19,8 @@ $.logoutButton.addEventListener('click', function(){
 		if(e.success){
 			alert("로그 아웃 되었습니다.");
 			Ti.App.Properties.removeProperty('cloudSessionId');
-			Alloy.createController('login').getView().open();;
+			Alloy.createController('login').getView().open();
+	        facebookModule.logout();
 		}else{
 			alert("로그 아웃이 실패 했는데..\n다시 시도 해보실래요?;;");
 		}
