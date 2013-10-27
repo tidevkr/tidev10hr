@@ -7,16 +7,18 @@
 		</View>
 		<View id="contentView">
 			<TableView id="questTableView" scrollable="false">
-				<TableViewSection>
+				<TableViewSection id="questTableSection" >
+					<!--
 					<TableViewRow id="q1Row" class="qRow" title="v">
-						<Label id="q1" class="qLabel">앱 설치 & 로그</Label>
+						<Label class="qLabel">앱 설치 & 로그</Label>
 					</TableViewRow>
 					<TableViewRow class="qRow" title="">
-						<Label id="q2" class="qLabel">리뷰 (0/5)개 남기기</Label>
+						<Label class="qLabel">리뷰 (0/5)개 남기기</Label>
 					</TableViewRow>
 					<TableViewRow class="qRow" title="">
-						<Label id="q3" class="qLabel">B35에서 도장 받기</Label>
+						<Label class="qLabel">B35에서 도장 받기</Label>
 					</TableViewRow>
+					-->
 				</TableViewSection>
 			</TableView>
 			<!-- <Label id="emailLabel">email</Label> -->

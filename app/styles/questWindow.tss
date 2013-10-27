@@ -5,6 +5,13 @@
 
 // density == Ti.Platform.DisplayCaps.density
 // pixel == dp * ( density / 160 )
+// "Label":{
+	// color: "#999",
+	// font: {
+		// fontFamily:'Arial',
+		// fontSize: 19
+	// }
+// },
 "#userView": {
 	height: 200,
 	width: Ti.UI.FILL,
@@ -51,22 +58,16 @@
 	width: "80%",
 	height: 200
 	// borderWidth: 1
-},
-".qRow":{
-	height: 50,
-	font: {
-		fontFamily:'Arial',
-		// fontSize: 19,
-		fontWeight: 'bold'
-	}
-},
-".qLabel":{
-	color: "#999",
-	font: {
-		fontFamily:'Arial',
-		fontSize: 19
-	}
 }
+// ".qRow":{
+	// height: 50,
+	// font: {
+		// fontFamily:'Arial',
+		// // fontSize: 19,
+		// fontWeight: 'bold'
+	// }
+// }
+
 
 
 

@@ -1,5 +1,5 @@
-var quest = Alloy.Collections.instance('quest');
-quest.add([{
+var quests = Alloy.Collections.instance('quest');
+quests.add([{
 	'qid': 0,
 	'isCompleted': true,
 	'title': "앱 설치 & 로그"
@@ -8,8 +8,30 @@ quest.add([{
 	'title': "리뷰 (0/5)개 남기기"
 },{
 	'qid': 2,
-	'title': "리뷰 (0/5)개 남기기"
+	'title': "B35에서 도장 받기"
 }]);
+
+quests.each(function(quest){
+	var row = Ti.UI.createTableViewRow({
+		title: quest.get('isCompleted') ? 'v' : '',
+		height: 50,
+		font:{
+			fontFamily:'Arial',
+			// fontSize: 19,
+			fontWeight: 'bold'		
+		}
+	});
+	var label = Ti.UI.createLabel({
+		text: quest.get('title'),
+		color: "#999",
+		font: {
+			fontFamily:'Arial',
+			fontSize: 19
+		}
+	});
+	row.add(label);
+	$.questTableSection.add( row );
+});
 
 var user = Alloy.Models.instance('user');
 user.on('change', function(){
