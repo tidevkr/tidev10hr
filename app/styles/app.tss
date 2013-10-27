@@ -1,3 +1,12 @@
 "Window": {
 	backgroundColor: "#FFF"
+},
+"TableRow":{
+	height: 50,
+	color: "#DDD",
+	font: {
+		fontFamily:'Arial'
+		// fontSize: 19,
+		// fontWeight: 'bold'
+	}
 }
