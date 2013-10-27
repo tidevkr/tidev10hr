@@ -99,9 +99,15 @@ user.on('change', function() {
 			var reviews = _.filter(e.reviews, function(review) {
 				return review.user.id === user.get('id');
 			});
-			quests.at(1).set({
+			var quest = quests.at(1);
+			quest.set({
 				reviewed : reviews.length
 			});
+			if (reviews.length >= 5) {
+				quest.set({
+					isCompleted : true
+				});
+			}
 		} else {
 			alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 		}
