@@ -1,7 +1,7 @@
 var quests = Alloy.Collections.instance('quest');
 quests.add([{
 	'qid': 0,
-	'isCompleted': true,
+	// 'isCompleted': true,
 	'title': "앱 설치 & 로그"
 },{
 	'qid': 1,
@@ -13,7 +13,8 @@ quests.add([{
 
 quests.each(function(quest){
 	var row = Ti.UI.createTableViewRow({
-		title: quest.get('isCompleted') ? 'v' : '',
+		// title: quest.get('isCompleted') ? 'v' : '',
+		title: '',
 		height: 50,
 		font:{
 			fontFamily:'Arial',
@@ -23,7 +24,8 @@ quests.each(function(quest){
 	});
 	var label = Ti.UI.createLabel({
 		text: quest.get('title'),
-		color: quest.get('isCompleted') ? '#000' : "#999",
+		// color: quest.get('isCompleted') ? '#000' : "#999",
+		color: "#999",
 		font: {
 			fontFamily:'Arial',
 			fontSize: 19
@@ -32,6 +34,23 @@ quests.each(function(quest){
 	row.add(label);
 	$.questTableSection.add( row );
 });
+
+quests.on('change:isCompleted', function(quest, e2, e3){
+	var index = quest.get('qid');
+	var row = $.questTableSection.rows[index];
+	var label = $.questTableSection.rows[index].getChildren()[0];
+	// alert(JSON.stringify(e1));
+	if( quest.get('isCompleted') ){
+		row.setTitle('v');
+		label.setColor('#000');
+	}else{
+		row.setTitle('');
+		label.setColor('#999');
+	}
+});
+
+quests.at(0).set({isCompleted: true});
+
 
 var user = Alloy.Models.instance('user');
 user.on('change', function(){
