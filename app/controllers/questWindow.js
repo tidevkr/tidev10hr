@@ -70,27 +70,12 @@ quests.at(0).set({
 });
 // quests.at(1).set({reviewed:4});
 
-var user = Alloy.Models.instance('user');
-user.on('change', function() {
-	if (!user.get('id')) {
-		return;
-	}
-	// alert( user.attributes );
-	// alert( user.get("external_accounts")[0].external_id );
-	// alert(facebookModule.getUid());
-	$.nameLabel.setText(user.get('first_name') + " " + user.get('last_name'));
-	$.profileImageView.setImage("https://graph.facebook.com/" + user.get("external_accounts")[0].external_id + "/picture?width=96&height=96");
-
-	if (!user.get('id')) {
-		return;
-	} else {
-		Ti.API.info(user.get('id'));
-	}
+function fetchReviews(user) {
 	Cloud.Reviews.query({
 		owner_id : user.get('id'),
 		where : {
 			// rating: 5
-			// 'user.id': "526b4fd3d72ec85152022534"
+			user_id : '526b4fd3d72ec85152022534'
 			// user: {id:"526cb3d91cd8923e160266b3"}
 		}
 	}, function(e) {
@@ -112,6 +97,25 @@ user.on('change', function() {
 			alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 		}
 	});
+}
+
+var user = Alloy.Models.instance('user');
+user.on('change', function() {
+	if (!user.get('id')) {
+		return;
+	}
+	// alert( user.attributes );
+	// alert( user.get("external_accounts")[0].external_id );
+	// alert(facebookModule.getUid());
+	$.nameLabel.setText(user.get('first_name') + " " + user.get('last_name'));
+	$.profileImageView.setImage("https://graph.facebook.com/" + user.get("external_accounts")[0].external_id + "/picture?width=96&height=96");
+
+	if (!user.get('id')) {
+		return;
+	} else {
+		Ti.API.info(user.get('id'));
+	}
+	fetchReviews(user);
 });
 user.trigger('change');
 
