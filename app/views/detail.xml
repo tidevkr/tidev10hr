@@ -1,10 +1,9 @@
 <Alloy>
 	<Window class="container">
-		<WebView id="webView">
-			
-		</WebView>
 		<View id="rateView">
-			<Label>평가 버튼이 들어갈 자리</Label>
+			<Label>강의 평가를 해주세요!</Label>
+			<Widget id="starwidget" src="starrating" max='5' initialRating='0'/>
 		</View>
+		<WebView id="webView" />
 	</Window>
 </Alloy>

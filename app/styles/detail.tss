@@ -1,12 +1,26 @@
 ".container" : {
  	 
-}
+},
+
+"Label" : {
+	top : 2,
+	width : Ti.UI.SIZE,
+	color: '#EEE',
+	font: {
+		fontSize: 14,
+		fontWeight: 'bold'
+	}
+},
 
 "#webView" : {
-	top : 44
-}
+	top : 60
+},
 
 "#rateView" : {
-	height : 44,
+	height : 60,
 	top : 0
+},
+
+"#starwidget" : {
+	top : 30
 }
