@@ -23,7 +23,7 @@ quests.each(function(quest){
 	});
 	var label = Ti.UI.createLabel({
 		text: quest.get('title'),
-		color: "#999",
+		color: quest.get('isCompleted') ? '#000' : "#999",
 		font: {
 			fontFamily:'Arial',
 			fontSize: 19
