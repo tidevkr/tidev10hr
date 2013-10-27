@@ -1,0 +1,12 @@
+<Alloy>
+	<View>
+		<WebView id="webview" url="http://tidev.kr" />
+		<View class="buttonView">
+			<Button id="back" onClick="handleGoBack" />
+			<Button id="forward" onClick="handleGoForward" />
+			<Button id="home" onClick="handleGoHome"/>
+			<Button id="refresh" onClick="handleRefresh" />
+			<Label/>
+		</View>
+	</View>
+</Alloy>

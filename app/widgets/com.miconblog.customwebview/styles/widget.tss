@@ -1,0 +1,46 @@
+"WebView" : {
+	enableZoomControls : false,
+	willHandleTouches : false
+},
+".buttonView" : {
+	height : 40,
+	width : Ti.UI.FILL,
+	bottom : 0,
+	layout: "horizontal",
+	backgroundColor: "#555"
+},
+"Button": {
+	top : 1,
+	left: 1,
+	color: '#000',
+	font: {
+		fontSize: 14,
+		fontWeight: 'bold'
+	},
+	height: 38,
+	width: 38
+},
+
+"Label" : {
+	left: 6,
+	text: "한국 타이타늄 사용자 모임",
+	width : Ti.UI.SIZE,
+	color: '#EEE',
+	font: {
+		fontSize: 14,
+		fontWeight: 'bold'
+	}
+},
+
+"#back" : {
+	backgroundImage : WPATH('/images/back.png')
+},
+"#forward" : {
+	backgroundImage : WPATH('/images/forward.png')
+},
+"#home" : {
+	backgroundImage : WPATH('/images/home.png')
+},
+"#refresh" : {
+	backgroundImage : WPATH('/images/refresh.png')
+}
