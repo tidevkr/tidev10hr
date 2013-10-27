@@ -1,6 +1,6 @@
 var currentWindow = $.getView();
 var fbHandler = function(e){
-	alert(e);
+	// alert(e);
 	if (e.success) {
         var token = this.accessToken;
         Ti.API.info('Logged in ' + token);

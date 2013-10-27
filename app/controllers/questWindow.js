@@ -27,8 +27,3 @@ $.logoutButton.addEventListener('click', function(){
 	});
 });
 
-$.q1.setColor('#000');
-
-$.q2.addEventListener('click', function(){
-	$.q1Row.fireEvent('click', {} );
-});
