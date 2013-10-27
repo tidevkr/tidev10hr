@@ -72,18 +72,12 @@ quests.at(0).set({
 
 function fetchReviews(user) {
 	Cloud.Reviews.query({
-		owner_id : user.get('id'),
 		where : {
-			// rating: 5
-			user_id : '526b4fd3d72ec85152022534'
-			// user: {id:"526cb3d91cd8923e160266b3"}
+			user_id : user.get('id')
 		}
 	}, function(e) {
 		if (e.success) {
-			// Ti.API.info(JSON.stringify(e));
-			var reviews = _.filter(e.reviews, function(review) {
-				return review.user.id === user.get('id');
-			});
+			var reviews = e.reviews;
 			var quest = quests.at(1);
 			quest.set({
 				reviewed : reviews.length
