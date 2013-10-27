@@ -37,12 +37,9 @@ placeCol.fetch({
 
 $.listView.addEventListener('itemclick', function(e) {
 	if(e.itemId){
-		//alert(e);
 		var selectedModel = placeCol.get(e.itemId);
-		var detailC = Alloy.createController('detail',{
-			model : selectedModel
+		utils.openController('detail', {
+			model: selectedModel
 		});
-		utils.openController(detailC);
-		// Alloy.Globals.mainTabGroup.activeTab.open(detailC.getView());
 	}
 });
