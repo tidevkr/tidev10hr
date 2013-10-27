@@ -8,7 +8,7 @@ if (model) {
     $.starwidget.init(function(num) {
         
         if(myReview){
-            alert("리뷰를 업데이트 합니다! ");
+            // alert("리뷰를 업데이트 합니다! ");
             Cloud.Reviews.update({
                 place_id: model.get("id"),
                 review_id: myReview.id,
@@ -24,7 +24,7 @@ if (model) {
             });
             
         }else{
-            alert("리뷰를 등록합니다.");
+            // alert("리뷰를 등록합니다.");
             Cloud.Reviews.create({
                 place_id: model.get("id"),
                 rating: num,

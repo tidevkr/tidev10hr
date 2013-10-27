@@ -63,7 +63,7 @@ quests.on('change:reviewed', function(quest){
 });
 
 quests.at(0).set({isCompleted: true});
-quests.at(1).set({reviewed:4});
+// quests.at(1).set({reviewed:4});
 
 var user = Alloy.Models.instance('user');
 user.on('change', function(){
