@@ -3,8 +3,10 @@ exports.definition = {
 
 		adapter: {
 			type: "acs",
-			collection_name: "place"
+			collection_name: "place",
+			idAttribute : 'id',
 		},
+		
 		
 		"settings": {
 	        "object_name": "places", 

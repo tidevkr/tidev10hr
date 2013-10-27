@@ -1,22 +1,33 @@
 var placeCol = Alloy.Collections.instance('place');
+Cloud.debug = true;
 
 placeCol.on('reset',function(col){
 	var items = [];
-	placeCol.each(function(model){
-		Ti.API.info(model.attributes);
+	placeCol.each(function(myModel){
+		var custom = myModel.get('custom_fields');
+		var thumbUrl;
+		if(custom){
+			thumbUrl = custom["thumbnail_url"];
+		}
 		items.push({
 			template : 'itemTemplate',
 			thumb : {
-				image : model.get('thumbnail_url')
+				image : thumbUrl
 			},
 			myLabel :{
-				text : model.get('name')
+				text : myModel.get('name')
 			},
 			properties :{
-				itemId : model.id,
+				itemId : myModel.id,
 				height : 70
 			},
 		});
+		
+		//add custom filed
+		var findData = _.find(data,function(item){
+			return item.title == myModel.get('name');
+		});
+		Ti.API.info(myModel.id);
 	});
 	$.section.setItems(items);
 });
