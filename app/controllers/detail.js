@@ -60,7 +60,7 @@ Cloud.Reviews.query({
             myReview = review[0];
             $.starwidget.setRating(myReview.rating);
         }else{
-            myReview = null
+            myReview = null;
         }
 
     } else {

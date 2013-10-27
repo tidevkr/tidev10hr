@@ -65,6 +65,7 @@ quests.on('change:reviewed', function(quest){
 quests.at(0).set({isCompleted: true});
 // quests.at(1).set({reviewed:4});
 
+
 var user = Alloy.Models.instance('user');
 user.on('change', function(){
 	if( !user.get('id') ){
@@ -77,7 +78,30 @@ user.on('change', function(){
 	$.profileImageView.setImage("https://graph.facebook.com/"
 				+ user.get("external_accounts")[0].external_id
 				+"/picture?width=96&height=96");
-
+				
+	if( !user.get('id') ){
+		return;
+	}else{
+		Ti.API.info(user.get('id'));
+	}
+	Cloud.Reviews.query({
+		owner_id: user.get('id'),
+	    where: {
+	    	// rating: 5
+	        // 'user.id': "526b4fd3d72ec85152022534"
+	        // user: {id:"526cb3d91cd8923e160266b3"}
+	    }
+	}, function(e){
+	    if (e.success) {
+	    	reviews = _.filter(e.reviews, function(review) {
+	    		return review.user.id == user.get('id');
+	    	});
+	    	quests.at(1).set({'reviewed': reviews.length});
+	    	// Ti.API.info(JSON.stringify(e));
+	    } else {
+	        alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
+	    }
+	});
 });
 user.trigger('change');
 
