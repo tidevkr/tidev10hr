@@ -3,7 +3,19 @@
   title : '강좌 목록'
 }
 
-".red[platform=android]" :{
-	color : 'red',
-	right : 0
+".thumb" : {
+	left: 10,
+	height : 60,
+	width : 60,
+	borderColor : '#aaa',
+	borderWidth : 1
+}
+
+".title" : {
+	left : 80,
+	// top : 10,
+	font : {
+		fontSize: 17,
+		color : '#333'
+	}
 }
