@@ -8,7 +8,7 @@
 		<View id="contentView">
 			<TableView id="questTableView" scrollable="false">
 				<TableViewSection>
-					<TableViewRow class="qRow" title="v">
+					<TableViewRow id="q1Row" class="qRow" title="v">
 						<Label id="q1" class="qLabel">앱 설치 & 로그</Label>
 					</TableViewRow>
 					<TableViewRow class="qRow" title="">
