@@ -1,10 +1,17 @@
 exports.definition = {
 	config: {
-
+		columns:{
+			'qid': 'INTEGER',
+			'isCompleted': 'INTEGER',
+			'title': 'TEXT',
+		},
+		defaults: {
+			'isCompleted': false
+		},
 		adapter: {
 			type: "properties",
-			collection_name: "user",
-			idAttribute : 'loginUser'
+			collection_name: "quest",
+			idAttribute : 'qid'
 		}
 	},
 	extendModel: function(Model) {

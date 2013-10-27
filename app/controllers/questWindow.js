@@ -1,3 +1,16 @@
+var quest = Alloy.Collections.instance('quest');
+quest.add([{
+	'qid': 0,
+	'isCompleted': true,
+	'title': "앱 설치 & 로그"
+},{
+	'qid': 1,
+	'title': "리뷰 (0/5)개 남기기"
+},{
+	'qid': 2,
+	'title': "리뷰 (0/5)개 남기기"
+}]);
+
 var user = Alloy.Models.instance('user');
 user.on('change', function(){
 	if( !user.get('id') ){
