@@ -4,9 +4,11 @@ exports.definition = {
 			'qid': 'INTEGER',
 			'isCompleted': 'INTEGER',
 			'title': 'TEXT',
+			'reviewed': 'INTEGER'	// only for 'qid===1'
 		},
 		defaults: {
-			'isCompleted': false
+			'isCompleted': false,
+			'reviewed': -1
 		},
 		adapter: {
 			type: "properties",

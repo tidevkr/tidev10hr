@@ -5,7 +5,8 @@ quests.add([{
 	'title': "앱 설치 & 로그"
 },{
 	'qid': 1,
-	'title': "리뷰 (0/5)개 남기기"
+	'title': "리뷰 (0/5)개 남기기",
+	'reviewed': 0
 },{
 	'qid': 2,
 	'title': "B35에서 도장 받기"
@@ -38,7 +39,7 @@ quests.each(function(quest){
 quests.on('change:isCompleted', function(quest, e2, e3){
 	var index = quest.get('qid');
 	var row = $.questTableSection.rows[index];
-	var label = $.questTableSection.rows[index].getChildren()[0];
+	var label = row.getChildren()[0];
 	// alert(JSON.stringify(e1));
 	if( quest.get('isCompleted') ){
 		row.setTitle('v');
@@ -48,9 +49,20 @@ quests.on('change:isCompleted', function(quest, e2, e3){
 		label.setColor('#999');
 	}
 });
+quests.on('change:reviewed', function(quest){
+	var index = 1;	// 리뷰해야 하는 퀘스트 아이디
+	if(quest.get('qid') !== index){
+		return;
+	}  
+	var label = $.questTableSection.rows[index].getChildren()[0];
+	label.setText(String.format('리뷰 (%d/5)개 남기기', quest.get('reviewed')));
+	if( quest.get('reviewed') >= 5){
+		quest.set({'isCompleted': true});
+	}
+});
 
 quests.at(0).set({isCompleted: true});
-
+// quests.at(1).set({reviewed:5});
 
 var user = Alloy.Models.instance('user');
 user.on('change', function(){
