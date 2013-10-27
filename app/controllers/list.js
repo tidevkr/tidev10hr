@@ -23,11 +23,6 @@ placeCol.on('reset',function(col){
 			},
 		});
 		
-		//add custom filed
-		var findData = _.find(data,function(item){
-			return item.title == myModel.get('name');
-		});
-		Ti.API.info(myModel.id);
 	});
 	$.section.setItems(items);
 });
