@@ -80,13 +80,9 @@ function fetchReviews(user) {
 			var reviews = e.reviews;
 			var quest = quests.at(1);
 			quest.set({
-				reviewed : reviews.length
+				reviewed : reviews.length,
+				isCompleted : reviews.length >= 5
 			});
-			if (reviews.length >= 5) {
-				quest.set({
-					isCompleted : true
-				});
-			}
 		} else {
 			alert('Error:\n' + ((e.error && e.message) || JSON.stringify(e)));
 		}
