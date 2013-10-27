@@ -1,3 +1,4 @@
+var utils = require('utils');
 var placeCol = Alloy.Collections.instance('place');
 Cloud.debug = true;
 
@@ -36,11 +37,9 @@ placeCol.fetch({
 
 $.listView.addEventListener('itemclick', function(e) {
 	if(e.itemId){
-		//alert(e);
 		var selectedModel = placeCol.get(e.itemId);
-		var detailC = Alloy.createController('detail',{
-			model : selectedModel
+		utils.openController('detail', {
+			model: selectedModel
 		});
-		Alloy.Globals.mainTabGroup.activeTab.open(detailC.getView());
 	}
 });
