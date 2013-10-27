@@ -3,11 +3,19 @@ var placeCol = Alloy.Collections.instance('place');
 placeCol.on('reset',function(col){
 	var items = [];
 	placeCol.each(function(model){
+		Ti.API.info(model.attributes);
 		items.push({
+			template : 'itemTemplate',
+			thumb : {
+				image : model.get('thumbnail_url')
+			},
+			myLabel :{
+				text : model.get('name')
+			},
 			properties :{
-				title : model.get('name'),
-				itemId : model.id
-			}
+				itemId : model.id,
+				height : 70
+			},
 		});
 	});
 	$.section.setItems(items);

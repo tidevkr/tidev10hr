@@ -2,8 +2,9 @@
 	<Window class="container">
 		<ListView id="listView">
 			<Templates>
-				<ItemTemplate name="item">
-					<Label class="red" bindId="myLabel"></Label>
+				<ItemTemplate name="itemTemplate">
+					<ImageView class="thumb" bindId="thumb"></ImageView>
+					<Label class="title" bindId="myLabel"></Label>
 				</ItemTemplate>
 			</Templates>
 			<ListSection id="section">
