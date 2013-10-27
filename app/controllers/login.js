@@ -38,7 +38,7 @@ $.fbLogin.addEventListener('click', function(e) {
 });
 
 $.emailBtn.addEventListener('click', function(e) {
-	alert('아직 안되지롱~요..facebook으로 해주세요.^^');
+	alert('아직 안되지롱~요..\nFacebook으로 해주세요.^^');
 });
 
 currentWindow.addEventListener('open', function(e) {
