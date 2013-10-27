@@ -1,3 +1,4 @@
+var utils = require('utils');
 var placeCol = Alloy.Collections.instance('place');
 Cloud.debug = true;
 
@@ -41,6 +42,7 @@ $.listView.addEventListener('itemclick', function(e) {
 		var detailC = Alloy.createController('detail',{
 			model : selectedModel
 		});
-		Alloy.Globals.mainTabGroup.activeTab.open(detailC.getView());
+		utils.openController(detailC);
+		// Alloy.Globals.mainTabGroup.activeTab.open(detailC.getView());
 	}
 });
