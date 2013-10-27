@@ -8,11 +8,11 @@
 				<Label>I am Window 2</Label>
 			</Window>
 		</Tab>
-		<Tab title="QUEST" icon="KS_nav_views.png">
-			<Require id="questWindow" src="questWindow" />
-		</Tab>
 		<Tab title="TiDev" icon="KS_nav_views.png">
 			<Require id="tidevWindow" src="tidevWindow" />
+		</Tab>
+		<Tab title="QUEST" icon="KS_nav_views.png">
+			<Require id="questWindow" src="questWindow" />
 		</Tab>
 	</TabGroup>
 </Alloy>

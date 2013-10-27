@@ -33,14 +33,18 @@
 },
 
 "#back" : {
-	backgroundImage : WPATH('/images/back.png')
+	backgroundImage : WPATH('/images/back.png'),
+	backgroundSelectedImage : WPATH('/images/back_on.png')
 },
 "#forward" : {
-	backgroundImage : WPATH('/images/forward.png')
+	backgroundImage : WPATH('/images/forward.png'),
+	backgroundSelectedImage : WPATH('/images/forward_on.png')
 },
 "#home" : {
-	backgroundImage : WPATH('/images/home.png')
+	backgroundImage : WPATH('/images/home.png'),
+	backgroundSelectedImage : WPATH('/images/home_on.png')
 },
 "#refresh" : {
-	backgroundImage : WPATH('/images/refresh.png')
+	backgroundImage : WPATH('/images/refresh.png'),
+	backgroundSelectedImage : WPATH('/images/refresh_on.png')
 }
